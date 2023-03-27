@@ -29,7 +29,7 @@ const CanvasView: React.FC<IProps> = ({ width, height, onInit }: IProps) => {
 
   return (
     <>
-      <canvas ref={canvasRef} className='w-screen h-screen' ></canvas>
+      <canvas ref={canvasRef} className='w-screen h-screen'></canvas>
     </>
   );
 };
