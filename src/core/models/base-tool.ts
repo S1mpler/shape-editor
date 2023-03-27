@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import 'reflect-metadata';
 import BasePolygon from './base-polygon';
 import ITool from './tool.interface';
