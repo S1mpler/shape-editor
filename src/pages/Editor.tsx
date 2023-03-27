@@ -6,14 +6,10 @@ import Canvas from '../components/Canvas';
 import Toolbar from '../components/Toolbar';
 import { StoreContext } from '../context/store.context';
 import { serializeShapes } from '../core/utils/serialization';
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from '../core/editor-configuration';
 
 function EditorPage(): ReactElement {
   const { toolStore, shapeStore } = useContext(StoreContext);
-
-  const canvasResolution = {
-    width: 1000,
-    height: 1000 * window.innerHeight / window.innerWidth
-  };
 
   const onCanvasInit = (canvas: HTMLCanvasElement): void => {
     toolStore.setTools(
@@ -38,7 +34,7 @@ function EditorPage(): ReactElement {
             Print to console
           </button>
         </div>
-        <Canvas width={canvasResolution.width} height={canvasResolution.height} onInit={onCanvasInit} />
+        <Canvas width={CANVAS_WIDTH} height={CANVAS_HEIGHT} onInit={onCanvasInit} />
       </div>
     </>
   );

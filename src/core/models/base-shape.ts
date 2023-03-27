@@ -1,14 +1,16 @@
+import { ShapeIconType } from './icon.type';
+
 abstract class BaseShape {
   readonly id: string;
   name: string;
   description: string;
   color: string;
-  icon: string;
+  icon: ShapeIconType | null;
 
-  constructor(name?: string, icon?: string, description?: string, color?: string) {
+  constructor(name?: string, icon?: ShapeIconType, description?: string, color?: string) {
     this.id = crypto.randomUUID();
     this.name = name ?? '';
-    this.icon = icon ?? '';
+    this.icon = icon ?? null;
     this.description = description ?? '';
     this.color = color ?? '';
   }

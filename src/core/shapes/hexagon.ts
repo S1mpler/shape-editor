@@ -1,10 +1,11 @@
 import { Shape } from '../../core/decorators/shape.decorator';
 import BasePolygon from '../../core/models/base-polygon';
 import IPoint from '../../core/models/point.interface';
+import { SPAWN_POINT } from '../editor-configuration';
 
 @Shape({
   name: 'Hexagon',
-  description: 'A hexagon is a six-sided polygon or 6-gon. The total of all the angles in a hexagon is 720°. A regular hexagon has all sides the same length and all angles the same size. A regular hexagon is also a regular polygon and is both equiangular and equilateral.',
+  description: 'A hexagon is a six-sided polygon or 6-gon. The total of all the angles in a hexagon is 720°.',
   icon: 'hexagon',
   color: '#76b1e8'
 })
@@ -13,7 +14,7 @@ class Hexagon extends BasePolygon {
 
   constructor() {
     super();
-    this.createVertices({ x: 500, y: 400 });
+    this.createVertices(SPAWN_POINT);
   }
 
   createVertices(position: IPoint): void {
