@@ -42,7 +42,7 @@ const ToolbarView: React.FC = () => {
                 onMouseLeave={() => { setTooltipTool(null); }}>
                 <Icon name={tool.icon} />
               </button>
-              <div id={`tooltip-${index}`} role="tooltip" className={`z-0 inline-block absolute -top-5 min-w-[220px] left-full px-6 py-4 ml-3 bg-blue-400 text-white rounded shadow-md before:absolute before:top-8 before:-left-1 before:w-4 before:h-4 before:bg-blue-400 before:rounded-sm before:rotate-45 translate-y-5 opacity-0 select-none transition-all tooltip ${showTooltip ? '-translate-y-0 opacity-100 visible' : 'invisible'}`}>
+              <div id={`tooltip-${index}`} role="tooltip" className={`z-0 inline-block absolute -top-5 min-w-[220px] left-full px-6 py-4 ml-3 bg-blue-400 text-white rounded shadow-md before:absolute before:top-8 before:-left-1 before:w-4 before:h-4 before:bg-blue-400 before:rounded-sm before:rotate-45 opacity-0 select-none transition-all tooltip ${showTooltip ? 'translate-y-0 opacity-100 visible' : 'invisible translate-y-5'}`}>
                 <h1 className='text-lg font-bold mb-2'>{tool.name}</h1>
                 <p className='text-sm'>{tool.description}</p>
               </div>
