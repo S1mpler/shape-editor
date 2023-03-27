@@ -1,6 +1,6 @@
-import { Shape } from '../../core/decorators/shape.decorator';
-import BasePolygon from '../../core/models/base-polygon';
-import IPoint from '../../core/models/point.interface';
+import { Shape } from '../decorators/shape.decorator';
+import BasePolygon from '../models/base-polygon';
+import IPoint from '../models/point.interface';
 import { SPAWN_POINT } from '../editor-configuration';
 
 @Shape({
