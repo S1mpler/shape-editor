@@ -23,7 +23,6 @@ class ToolStore {
   }
 
   selectTool(tool: BaseTool): void {
-    // TODO: optimize this and remove unselectTool() function
     this.unselectTool();
     this.selectedTool = tool;
     this.selectedTool.bindEventListeners();

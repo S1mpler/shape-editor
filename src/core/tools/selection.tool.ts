@@ -13,7 +13,7 @@ import { isPointInPolygon } from '../../core/utils/helpers/geometry-helper-funct
 @Tool({
   name: 'Selection',
   icon: 'selection',
-  description: 'Select a shape'
+  description: 'Select a shape by clicking on it. You can only select one shape at a time. To deselect a shape, click on the empty canvas.'
 })
 class SelectionTool extends BaseTool {
   private readonly shapeStore = shapeStore;

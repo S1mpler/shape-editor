@@ -11,7 +11,7 @@ import { isPointInPolygon } from '../../core/utils/helpers/geometry-helper-funct
 @Tool({
   name: 'Move',
   icon: 'move',
-  description: 'Move a shape'
+  description: 'Move a shape by clicking and dragging it. You can only move one shape at a time.'
 })
 class MoveTool extends BaseTool {
   private readonly shapeStore = shapeStore;

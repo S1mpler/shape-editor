@@ -9,6 +9,7 @@ import { ToolIconType } from './icon.type';
 import Drawer from '../drawer';
 
 abstract class BaseTool implements ITool {
+  id: string;
   name: string;
   icon: ToolIconType | null;
   description: string;
@@ -18,6 +19,7 @@ abstract class BaseTool implements ITool {
   private readonly eventListeners: Map<keyof HTMLElementEventMap, (event: Event) => void>;
 
   constructor(canvas: HTMLCanvasElement, name?: string, icon?: ToolIconType, description?: string) {
+    this.id = crypto.randomUUID();
     this.name = name ?? '';
     this.icon = icon ?? null;
     this.description = description ?? '';

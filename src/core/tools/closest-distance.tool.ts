@@ -11,7 +11,7 @@ import { shapeStore } from '../../context/store.context';
 @Tool({
   name: 'Closest distance',
   icon: 'closest-distance',
-  description: 'Find the closest distance between cursor and shapes'
+  description: 'Find the closest distance between cursor and shapes by moving your cursor on the canvas. You need at least one shape to use this tool.'
 })
 class ClosestDistanceTool extends BaseTool {
   private readonly shapeStore = shapeStore;

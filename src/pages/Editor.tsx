@@ -30,7 +30,7 @@ function EditorPage(): ReactElement {
           <Toolbar />
         </div>
         <div className='absolute z-10 top-6 right-6'>
-          <button className='px-5 py-2 border-blue-300 border rounded text-blue-400 hover:shadow-sm' onClick={handleSerialize}>
+          <button className='px-5 py-2 border-blue-300 border rounded text-blue-400 bg-white hover:shadow-sm' onClick={handleSerialize}>
             Print to console
           </button>
         </div>
