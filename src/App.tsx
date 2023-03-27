@@ -1,10 +1,10 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import NotFoundPage from './pages/404';
 import EditorPage from './pages/Editor';
 
-function App(): ReactElement {
+const App: React.FC = () => {
   return (
     <React.Suspense fallback={<>loading...</>}>
       <Routes>
@@ -15,6 +15,6 @@ function App(): ReactElement {
       </Routes>
     </React.Suspense>
   );
-}
+};
 
 export default App;
