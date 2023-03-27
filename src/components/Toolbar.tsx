@@ -3,9 +3,9 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../context/store.context';
 import BasePolygon from '../core/models/base-polygon';
 import BaseTool from '../core/models/base-tool';
-import Hexagon from '../core/shapes/hexagon';
-import Square from '../core/shapes/square';
-import Triangle from '../core/shapes/triangle';
+import Hexagon from '../core/shapes/hexagon.shape';
+import Square from '../core/shapes/square.shape';
+import Triangle from '../core/shapes/triangle.shape';
 import Icon from './Icon';
 
 const ToolbarView: React.FC = () => {
