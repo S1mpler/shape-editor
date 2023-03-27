@@ -1,7 +1,7 @@
 import { Shape } from '../decorators/shape.decorator';
 import BasePolygon from '../models/base-polygon';
 import IPoint from '../models/point.interface';
-import { SPAWN_POINT } from '../editor-configuration';
+import { SHAPE_SIZE, SPAWN_POINT } from '../editor-configuration';
 
 @Shape({
   name: 'Hexagon',
@@ -11,6 +11,7 @@ import { SPAWN_POINT } from '../editor-configuration';
 })
 class Hexagon extends BasePolygon {
   vertices: IPoint[] = [] as IPoint[];
+  private readonly size = SHAPE_SIZE;
 
   constructor() {
     super();
@@ -18,14 +19,13 @@ class Hexagon extends BasePolygon {
   }
 
   createVertices(position: IPoint): void {
-    const addaptiveSize = 50;
     this.vertices = [
-      { x: position.x + -addaptiveSize / 1.7, y: position.y + -addaptiveSize },
-      { x: position.x + addaptiveSize / 1.7, y: position.y + -addaptiveSize },
-      { x: position.x + addaptiveSize * 1.2, y: position.y },
-      { x: position.x + addaptiveSize / 1.7, y: position.y + addaptiveSize },
-      { x: position.x + -addaptiveSize / 1.7, y: position.y + addaptiveSize },
-      { x: position.x + -addaptiveSize * 1.2, y: position.y }
+      { x: position.x + -this.size / 1.7, y: position.y + -this.size },
+      { x: position.x + this.size / 1.7, y: position.y + -this.size },
+      { x: position.x + this.size * 1.2, y: position.y },
+      { x: position.x + this.size / 1.7, y: position.y + this.size },
+      { x: position.x + -this.size / 1.7, y: position.y + this.size },
+      { x: position.x + -this.size * 1.2, y: position.y }
     ];
   }
 }
